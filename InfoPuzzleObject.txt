@@ -1,0 +1,211 @@
+Information needed for each Puzzle Object
+Based on "Yesterdays' News Data.docx"
+
+IDs are blank right now. Eventually, they will say something like "3d" for 3 down or "38a" for 38 across. Or do you guys think there's a better way of doing it?
+
+I'm leaving the IDs blank right now. We might use the exact crossword she gave us, or use her data to re-generate one. (To reference the data she used, look at "Yesterdays' News Data.docx" document she sent in her "Dr. Carr's crossword poem stuff." I believe we can plug that document right into the website.
+
+Formating note: *shows italics*
+
+WORD: A reverse fountain of youth
+CLUE: the thick-skinned poetry of the comfortable
+ID: 
+
+WORD: Agency
+CLUE: is a broken record. Spin me round baby.
+ID: 
+
+WORD: All symmetry
+CLUE: awaits the event that will dislodge if in a single blow
+ID: 
+
+WORD: American dream
+CLUE: a seductive invitation to fuse one’s private fortune with that of the nation
+ID: 
+
+WORD: By not paying attention
+CLUE: one tends to owe even more
+
+WORD: Chaos
+CLUE: what’s outside the picture is more important than what’s in, like a mountain carving space from time, time from space
+ID: 
+
+WORD: Chaos
+CLUE: the aquarium of dream
+ID: 
+
+WORD: Colleague
+CLUE: a being with whom we labor in time, a higher bar than stranger or neighbor, who are less inconvenient to us
+ID: 
+
+WORD: Compassion
+CLUE: sharing passion, sharing passivity, sharing our common *inability*
+ID: 
+
+WORD: Consciousness
+CLUE: optional, the ability to choose between undecidable alternatives—self-perception, self-enjoyment, self-judgment, self-loathing
+ID: 
+
+WORD: Death
+CLUE: the child you chose not to have, a curious boy on a stone wall, kicking his legs
+ID: 
+
+WORD: Depression
+CLUE: the logged off stumped fields of your mind
+ID: 
+
+WORD: Depression
+CLUE: flight inwards to where there is no sun
+ID: 
+
+WORD: Desire
+CLUE: the first layer of language that the stars carry
+ID: 
+
+WORD: Destiny
+CLUE: the best thing for you might be happening because I’m not there
+ID: 
+
+WORD: Disaffection and disillusionment
+CLUE: contagions we can spread ourselves
+ID: 
+
+WORD: Doubt
+CLUE: the child posed on the threshold of a door; also a ghost going the other way
+ID: 
+
+WORD: Duality
+CLUE: the 363 other days of shadowlands, a whole that is constantly in motion and constantly changing
+ID: 
+
+WORD: Emancipation
+CLUE: regulating behavior by drawing advice from what we see in the sun, moon, stars, wind, etc.
+ID: 
+
+WORD: Empathy
+CLUE: requires symmetry
+ID: 
+
+WORD: Ethics
+CLUE: empathic self-love that cannot be dissociated from the well-being of others
+ID: 
+
+WORD: Excessiveness
+CLUE: emancipation from established meaning by the revelation of the unseen horizon of the possible
+ID: 
+
+WORD: Faith
+CLUE: takes a practiced witness and I am neither
+ID: 
+
+WORD: Fate
+CLUE: like money or God which does not exist but is
+ID: 
+
+WORD: Fortune
+CLUE: the chaos hiding in the folds of the human mind
+ID: 
+
+WORD: Frankness
+CLUE: a form of being reliable
+ID: 
+
+WORD: Free will
+CLUE: depends on probability, between *can* and *do*
+ID: 
+
+WORD: Free will
+CLUE: imagination walking alongside history
+ID: 
+
+WORD: Grace
+CLUE: a condition of coincidence
+ID: 
+
+WORD: Grief
+CLUE: the felt and inarticulate sense of the out-of-jointedness or wrongness of the world as an irritant in the present
+ID: 
+
+WORD: Humility
+CLUE: awareness of the impermanence of our acts, our bodies, our consciousness
+ID: 
+
+WORD: Identity
+CLUE: not a set of conscious decisions but a set of compulsions, attachments and identifications that we feel
+ID: 
+
+WORD: Identity
+CLUE: a ruse, based on misunderstanding, exclusion, and aggression
+ID: 
+
+WORD: Intelligence
+CLUE: mandatory, choosing between decidable alternatives
+ID: 
+
+WORD: Innovation
+CLUE: think of it like weather rather than forward scientific progress
+ID: 
+
+WORD: Innuendo
+CLUE: laughing in our sunglasses, forgetting to look back
+ID: 
+
+WORD: Light bulb
+CLUE: makes the Ferris Wheel and nightshift possible
+ID: 
+
+WORD: Love and grief
+CLUE: lend themselves perhaps too readily to narrative
+ID: 
+
+WORD: Magic
+CLUE: an erotic relationship that is working
+ID: 
+
+WORD: Mischief
+CLUE: something wild vandalizing whatever the skull holds
+ID: 
+
+WORD: Poetry
+CLUE: reshuffles the boundaries between conscious and unconscious
+ID: 
+
+WORD: Sentimentality
+CLUE: the belief that underneath we are all alike
+ID: 
+
+WORD: Stars
+CLUE: thoughts
+ID: 
+
+WORD: The elaborate system of status
+CLUE: self replaces soul as the fist of survival
+ID: 
+
+WORD: The only enduring legacy of our species
+CLUE: nuclear waste, climate change, mass extinction
+ID: 
+
+WORD: To advise
+CLUE: to tell what we see
+ID: 
+
+WORD: To collaborate
+CLUE: requires seeing things together with no claim about harmony or intersubjectivity, like Sedgwick’s “white glasses,” focusing not on our feelings and fears but on what the scene is that we want to materialize and return to
+ID: 
+
+WORD: Tone
+CLUE: the action of the mind’s hands as they move through the air of the encounter
+ID: 
+
+WORD: Trauma
+CLUE: we discover our profound not mattering to the shape our lives take, but have to live anyway in what has been revealed as an impersonal space that houses the fantasy that we organize our worlds
+ID: 
+
+WORD: Unconcious
+CLUE: like the depths of the ocean where even the imagination cannot dive
+ID: 
+
+WORD: Wind
+CLUE: words
+ID: 
