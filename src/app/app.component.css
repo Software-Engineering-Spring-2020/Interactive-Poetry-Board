@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Goudy;
+    src: url("../assets/fonts/OFLGoudyStM.otf") format("opentype");
+  }
+
+* {
+    font-family: Goudy;
+}
+
 .two-column {
     display: flex;
 }
