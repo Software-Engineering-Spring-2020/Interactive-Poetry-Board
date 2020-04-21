@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ids } from '../yesterdaysNews'
 
 @Component({
   selector: 'app-clues',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clues.component.css']
 })
 export class CluesComponent implements OnInit {
+  ids = ids;
 
   constructor() { }
 

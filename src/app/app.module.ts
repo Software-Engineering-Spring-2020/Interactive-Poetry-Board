@@ -8,6 +8,7 @@ import { CluesComponent } from './clues/clues.component';
 import { PoemComponent } from './poem/poem.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterButtonsComponent } from './footer-buttons/footer-buttons.component';
+import { CluesAlertsComponent } from './clues/clues-alerts/clues-alerts.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterButtonsComponent } from './footer-buttons/footer-buttons.componen
     CluesComponent,
     PoemComponent,
     HeaderComponent,
-    FooterButtonsComponent
+    FooterButtonsComponent,
+    CluesAlertsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,5 @@
 <h2>CLUES</h2>
+
+<div *ngFor="let id of ids | keyvalue">
+    {{ id.key }} : {{ id.value["clue"] }}
+</div>
