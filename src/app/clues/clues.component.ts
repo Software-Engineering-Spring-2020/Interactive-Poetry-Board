@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ids } from '../yesterdaysNews'
 
 @Component({
@@ -7,6 +7,8 @@ import { ids } from '../yesterdaysNews'
   styleUrls: ['./clues.component.css']
 })
 export class CluesComponent implements OnInit {
+  @Output() clueSelected = new EventEmitter<String>();
+
   ids = ids; //what is the right type???
   downIds: Array<String>;;
   acrossIds: Array<String>;
@@ -56,7 +58,8 @@ export class CluesComponent implements OnInit {
 
   trigger(id: String): void {
     // alert parent
-    alert("will alert app with id " + id );
+    this.clueSelected.emit(id);
+    alert("Emitted event: clue clicked corresponding to " + id );
   }
 
 }
