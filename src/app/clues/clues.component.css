@@ -1,3 +1,68 @@
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
+    margin-bottom: 0;
 }
+
+hr {
+    width: 10ch;
+    border-top: 2px solid black;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 1em;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab {
+    display: block;
+    flex: 50%;
+    background-color: darkgrey;
+    text-align: center;
+    font-size: 1.17em;
+    line-height: 3;
+}
+
+.left {
+    border-style: solid solid solid hidden;
+}
+
+.right {
+    border-style: solid hidden solid hidden;
+}
+
+.selected {
+    background-color: white;
+    border-bottom: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+p {
+    margin: 0em;
+}
+
+.description {
+    font-style: italic;
+    text-align: center;
+    padding: 0 0 2ch 0;
+}
+
+a:not(.selected):hover {
+    background-color: lightgray;
+}
+
+.clues {
+    padding: 2ch 5ch 2ch 5ch;
+}
+
+.hidden {
+    display: none;
+}
+

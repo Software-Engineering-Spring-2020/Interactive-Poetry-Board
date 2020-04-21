@@ -1,5 +1,34 @@
 <h2>CLUES</h2>
+<hr>
+<p class="description">Explore the poem by clicking clues that intrigue you.</p>
 
-<div *ngFor="let id of ids | keyvalue">
-    {{ id.key }} : {{ id.value["clue"] }}
+<div class="tabs">
+    <a  (click)="switch($event)" class="left tab selected" id="across">
+        ACROSS
+    </a>
+    <a (click)="switch($event)" class="right tab background" id="down">
+        DOWN
+    </a>
+</div>
+
+<div class="clues">
+    <div class="across">
+        <ol>
+            <ng-template ngFor let-id [ngForOf]="acrossIds">
+                <li value="{{ id | slice:0:-1 }}">
+                    <a (click)="trigger(id)">{{ ids[id]["clue"] }}</a>
+                </li>
+            </ng-template>
+        </ol>
+    </div>
+
+    <div class="down hidden">
+        <ol>
+            <ng-template ngFor let-id [ngForOf]="downIds">
+                <li value="{{ id | slice:0:-1 }}">
+                    <a (click)="trigger(id)">{{ ids[id]["clue"] }}</a>
+                </li>
+            </ng-template>
+        </ol>
+    </div>
 </div>
