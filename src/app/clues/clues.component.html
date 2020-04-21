@@ -16,7 +16,7 @@
         <ol>
             <ng-template ngFor let-id [ngForOf]="acrossIds">
                 <li value="{{ id | slice:0:-1 }}">
-                    <a (click)="trigger(id)">{{ ids[id]["clue"] }}</a>
+                    <a (click)="trigger($event, id)">{{ ids[id]["clue"] }}</a>
                 </li>
             </ng-template>
         </ol>
@@ -26,7 +26,7 @@
         <ol>
             <ng-template ngFor let-id [ngForOf]="downIds">
                 <li value="{{ id | slice:0:-1 }}">
-                    <a (click)="trigger(id)">{{ ids[id]["clue"] }}</a>
+                    <a (click)="trigger($event, id)">{{ ids[id]["clue"] }}</a>
                 </li>
             </ng-template>
         </ol>

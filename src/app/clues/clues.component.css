@@ -44,6 +44,10 @@ a {
     cursor: pointer;
 }
 
+.clicked {
+    text-decoration: line-through;
+}
+
 p {
     margin: 0em;
 }
@@ -54,7 +58,7 @@ p {
     padding: 0 0 2ch 0;
 }
 
-a:not(.selected):hover {
+a:not(.selected):not(.clicked):hover {
     background-color: lightgray;
 }
 
