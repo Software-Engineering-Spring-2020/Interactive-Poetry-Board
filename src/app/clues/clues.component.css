@@ -38,7 +38,7 @@ hr {
     border-bottom: hidden;
 }
 
-a {
+a:not(.clicked) {
     text-decoration: none;
     color: black;
     cursor: pointer;

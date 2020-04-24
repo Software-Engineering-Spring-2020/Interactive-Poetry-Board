@@ -10,7 +10,7 @@ export class CluesComponent implements OnInit {
   @Output() clueSelected = new EventEmitter<String>();
 
   ids = ids; //what is the right type???
-  downIds: Array<String>;;
+  downIds: Array<String>;
   acrossIds: Array<String>;
 
   constructor() {
@@ -59,10 +59,12 @@ export class CluesComponent implements OnInit {
   trigger(event: Event, id: String): void {
     // strikethrough clicked event
     let clue: Element = (event.target as Element);
-    clue.classList.add("clicked");
-    // alert parent
-    this.clueSelected.emit(id);
-    alert("Emitted event: clue clicked corresponding to " + id );
+    if (!clue.classList.contains("clicked")) {
+      clue.classList.add("clicked");
+      // alert parent
+      this.clueSelected.emit(id);
+      alert("Emitted event: clue clicked corresponding to " + id );
+    }
   }
 
 }
