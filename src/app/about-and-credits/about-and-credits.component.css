@@ -1,0 +1,48 @@
+/*Might change the font section based on how it's routed/displayed*/
+@font-face {
+    font-family: Goudy;
+    /*src: url("Interactive-Poetry-Board/src/assets/fonts/OFLGoudyStM.otf") format("opentype");*/
+  }
+
+* {
+    font-family: Goudy;
+}
+  body {
+  padding-top: 60px;
+  text-align: left;
+}
+h1, h2 {
+  display: inline-block;
+  background: #fff;
+}
+h1 {
+  font-size: 30px
+}
+h2 {
+  font-size: 20px;
+}
+span {
+  background: #fd0;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 55%;
+  border-style: solid solid hidden hidden;
+}
+
+.right {
+  width: 35%;
+  border-style: solid hidden hidden hidden;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
