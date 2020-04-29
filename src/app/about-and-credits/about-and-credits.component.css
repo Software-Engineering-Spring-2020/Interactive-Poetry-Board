@@ -1,48 +1,63 @@
-/*Might change the font section based on how it's routed/displayed*/
-@font-face {
-    font-family: Goudy;
-    /*src: url("Interactive-Poetry-Board/src/assets/fonts/OFLGoudyStM.otf") format("opentype");*/
-  }
+/* Note this code doesn't specify font. When integrated into the project, it should use the correct font. */
 
-* {
-    font-family: Goudy;
+/* Body text has to be aligned center. For some reason, just centering the headers didn't work.*/
+body {
+  text-align: center;
 }
-  body {
-  padding-top: 60px;
-  text-align: left;
+
+p {
+text-align: left;
 }
-h1, h2 {
-  display: inline-block;
-  background: #fff;
+
+li {
+text-align: left;
 }
-h1 {
-  font-size: 30px
-}
-h2 {
-  font-size: 20px;
-}
-span {
-  background: #fd0;
+
+.row {
+  display: flex;
 }
 
 .column {
   float: left;
   padding: 10px;
+  /*flex: 1;*/ /*Creates same-width columns*/
 }
 
+/*The flexes here make the columns different widths*/
+/*This looks really weird with centered headings*/
+
 .left {
-  width: 55%;
-  border-style: solid solid hidden hidden;
+  border-style: solid solid solid hidden;
+  flex:2;
 }
 
 .right {
-  width: 35%;
-  border-style: solid hidden hidden hidden;
+  border-style: solid hidden solid hidden;
+  flex:1;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.leftnb { /* nb = no border */
+  border-style: hidden hidden hidden hidden;
+  flex:2;
+}
+
+.rightnb { /* nb = no border */
+  border-style: hidden hidden hidden hidden;
+  flex:1;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  background-color: DarkGray;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: Gainsboro;
 }
