@@ -1,0 +1,34 @@
+.row {
+  display: flex;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  flex: 1;
+}
+
+.leftnb { /* nb = no border */
+  border-style: hidden hidden hidden hidden;
+}
+
+.rightnb { /* nb = no border */
+  border-style: hidden hidden hidden hidden;
+}
+
+.button {
+  font-family: Goudy;
+  display: block;
+  width: 100%;
+  background-color: darkgrey;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: lightgray;
+}
