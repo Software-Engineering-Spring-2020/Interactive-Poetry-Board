@@ -1,11 +1,26 @@
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
+    margin-bottom: 0;
 }
 
-.fakeimg {
-  background-color: #aaa;
-  width: 80%;
-  padding: 20px;
+hr {
+    width: 10ch;
+    border-top: 2px solid black;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.description p{
+    font-style: italic;
+    text-align: center;
+    padding: 0 0 2ch 0;
 }
 
 .centered {
@@ -16,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 table {
+    background-color: black;
     border-collapse: collapse;
     text-align: center;
     width: 100%;
@@ -23,17 +39,15 @@ table {
 }
 
 th, td {
-    border: 1px solid black;
+    border: none; /*border: 1px solid grey; */
     height: 1vw; /* em */
     color: black;
     font-size: 2vmin;
-    white-space: nowrap;
     overflow : hidden;
-    visibility: visible;
 }
 
 .cell {
-    border: 1px solid black;
+    border: none;
     height: 1vw; /* em */
     color: black;
     font-size: 2vmin;
@@ -48,6 +62,7 @@ th, td {
 }
 
 .empty {
+  border:none;
     background-color: black;
 }
 

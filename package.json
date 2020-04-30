@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "@types/angular": "^1.7.0",
     "@types/scriptjs": "0.0.2",
     "rxjs": "~6.5.4",
     "scriptjs": "^2.5.9",

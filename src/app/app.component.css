@@ -7,12 +7,37 @@
     font-family: Goudy;
 }
 
-.two-column {
-    display: flex;
+/* Add a card effect for articles */
+.section {
+  position: relative;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.two-column:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 .column {
-    flex: 50%;
+  float: left;
+  width: 50%;
+  overflow-x: hidden;
+  border: hidden hidden solid hidden;
+  padding: 20px;
+  flex: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    float: none;
+    width: 100%;
+    padding: 0
+  }
 }
 
 .left {
@@ -46,7 +71,7 @@
     border-style: hidden hidden hidden hidden;
 }
 
-.flex-two { 
+.flex-two {
     flex:2;
 }
 
@@ -67,11 +92,30 @@
     font-size: 16px;
     cursor: pointer;
 }
-  
+
   .button:hover {
     background-color: lightgray;
   }
 
 .hidden {
     display: none;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media print {
+    .no-print {
+      display: none;
+    }
+    .to-print {
+       display: block;
+    }
 }

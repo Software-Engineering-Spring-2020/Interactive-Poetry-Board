@@ -1,3 +1,8 @@
+function fullPopulate(){}
+
+
+
+
 function  createTable(rows, columns){
     var table = document.getElementById("crossword"), i;
     for(i = 0; i<rows; i++) this.appendRow(table);
