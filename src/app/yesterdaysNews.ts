@@ -357,5 +357,5 @@ export const ids = {
 }
 };
 
-// this is a guess. meant to be edited.
+// Rows, Columns
 export const dimensions = [40, 40];

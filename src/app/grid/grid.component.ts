@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ids } from '../yesterdaysNews';
+import { dimensions } from '../yesterdaysNews';
 //import { get } from "scriptjs";
 declare var reset: any;
 declare var reveal: any;
@@ -27,9 +28,9 @@ export class GridComponent implements OnInit {
 
   constructor() {
     this.crossword = new Array<Array<String>>();
-    for (let y = 0; y < 40; y++) {
+    for (let y = 0; y < dimensions[0]; y++) {
       let row:String[]  = new Array<String>();
-      for (let x = 0; x <40; x++){
+      for (let x = 0; x <dimensions[1]; x++){
         row.push(null);
       }
       this.crossword.push(row);
