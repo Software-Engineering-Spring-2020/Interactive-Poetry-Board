@@ -13,22 +13,14 @@
 
 <div class="clues">
     <div class="across">
-        <ol>
-            <ng-template ngFor let-id [ngForOf]="acrossIds">
-                <li value="{{ id | slice:0:-1 }}">
-                    <a (click)="trigger($event, id)">{{ ids[id]["clue"] }}</a>
-                </li>
-            </ng-template>
-        </ol>
+        <ng-template ngFor let-id [ngForOf]="acrossIds">
+            <p><a (click)="trigger($event, id)">{{ id | slice:0:-1 }}. {{ ids[id]["clue"] }}</a></p>
+        </ng-template>
     </div>
 
     <div class="down hidden">
-        <ol>
-            <ng-template ngFor let-id [ngForOf]="downIds">
-                <li value="{{ id | slice:0:-1 }}">
-                    <a (click)="trigger($event, id)">{{ ids[id]["clue"] }}</a>
-                </li>
-            </ng-template>
-        </ol>
+        <ng-template ngFor let-id [ngForOf]="downIds">
+            <p><a (click)="trigger($event, id)">{{ id | slice:0:-1 }}. {{ ids[id]["clue"] }}</a></p>
+        </ng-template>
     </div>
 </div>

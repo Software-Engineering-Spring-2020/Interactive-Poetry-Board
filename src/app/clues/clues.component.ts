@@ -63,7 +63,6 @@ export class CluesComponent implements OnInit {
       clue.classList.add("clicked");
       // alert parent
       this.clueSelected.emit(id);
-      alert("Emitted event: clue clicked corresponding to " + id );
     }
   }
 

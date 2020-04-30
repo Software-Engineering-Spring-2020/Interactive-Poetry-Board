@@ -45,11 +45,11 @@ a:not(.clicked) {
 }
 
 .clicked {
-    text-decoration: line-through;
+    color: grey;
 }
 
 p {
-    margin: 0em;
+    margin: 0.25em 0 0.25em 0;
 }
 
 .description {
@@ -64,6 +64,8 @@ a:not(.selected):not(.clicked):hover {
 
 .clues {
     padding: 2ch 5ch 2ch 5ch;
+    display: flex;
+    flex-direction: column;
 }
 
 .hidden {
