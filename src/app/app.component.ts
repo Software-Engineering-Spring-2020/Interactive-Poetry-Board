@@ -27,4 +27,8 @@ export class AppComponent {
     this.clue = id;
   }
 
+  print(){
+    print();
+  }
+
 }

@@ -1,25 +1,25 @@
 <div id="puzzle">
-    <div class="header section"><app-header></app-header></div>
-    <div class="two-column section">
+    <div class="header section no-print"><app-header></app-header></div>
+    <div class="two-column section no-print">
         <div class="column section left"><app-grid [clue]="clue"></app-grid></div>
         <div class="column section right"><app-clues (clueSelected)="onEvent($event)"></app-clues></div>
     </div>
-    <div class="scroll-down-message section">Scroll down message</div>
+    <div class="scroll-down-message section no-print">Scroll down message</div>
 
     <div class="poem section"><app-poem></app-poem></div>
 
-    <div class="row">
+    <div class="row no-print">
         <div class = "column flex-one">
           <button class="button" (click)="toggle('about-and-credits')"> ABOUT & CREDITS </button>
         </div>
         <div class = "column flex-one">
-          <button class="button"> SAVE YOUR COLLABORATION </button>
+          <button class="button" (click)="print()"> SAVE YOUR COLLABORATION </button>
         </div>
     </div>
 </div>
 
 
-<div id="about-and-credits" class="hidden">
+<div id="about-and-credits" class="hidden no-print">
     <app-about-and-credits></app-about-and-credits>
     <div class="row">
       <div class = "column flex-two">
