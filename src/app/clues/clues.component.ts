@@ -36,7 +36,7 @@ export class CluesComponent implements OnInit {
     let tab: Element = (event.target as Element);
     if (!tab.classList.contains("selected") && tab.classList.contains("tab")) {
       let currentSelectedTab: HTMLCollectionOf<Element> = document.getElementsByClassName("selected");
-      
+
 
       let currentHiddenClues: HTMLCollectionOf<Element> = document.getElementsByClassName("hidden");
       currentHiddenClues[0].classList.remove("hidden");
