@@ -31,3 +31,47 @@
     text-align: center;
     border-style: hidden hidden solid hidden;
 }
+
+.row {
+    display: flex;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    /*flex: 1;*/ /*Creates same-width columns*/
+}
+
+.nb { /* nb = no border */
+    border-style: hidden hidden hidden hidden;
+}
+
+.flex-two { 
+    flex:2;
+}
+
+.flex-one { /* nb = no border */
+    border-style: hidden hidden hidden hidden;
+    flex:1;
+}
+
+.button {
+    font-family: Goudy;
+    display: block;
+    width: 100%;
+    background-color: darkgrey;
+    border: none;
+    color: black;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+  .button:hover {
+    background-color: lightgray;
+  }
+
+.hidden {
+    display: none;
+}

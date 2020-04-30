@@ -1,12 +1,34 @@
-<div class="header"><app-header></app-header></div>
+<div id="puzzle">
+    <div class="header"><app-header></app-header></div>
+    <div class="two-column">
+        <div class="column left"><app-grid></app-grid></div>
+        <div class="column right"><app-clues></app-clues></div>
+    </div>
+    <div class="scroll-down-message">Scroll down message</div>
 
-<div class="two-column">
-    <div class="column left"><app-grid></app-grid></div>
-    <div class="column right"><app-clues></app-clues></div>
+    <div class="poem"><app-poem></app-poem></div>
+
+    <div class="row">
+        <div class = "column flex-one">
+        <button class="button" (click)="toggle('about-and-credits')"> ABOUT & CREDITS </button>
+        </div>
+        <div class = "column flex-one">
+        <button class="button"> SAVE YOUR COLLABORATION </button>
+        </div>
+    </div>
 </div>
-<div class="scroll-down-message">Scroll down message</div>
 
-<div class="poem"><app-poem></app-poem></div>
-<div class="footer-buttons"><app-footer-buttons></app-footer-buttons></div>
+
+<div id="about-and-credits" class="hidden">
+    <app-about-and-credits></app-about-and-credits>
+    <div class="row">
+    <div class = "column flex-two">
+    <button class="button" (click)="toggle('puzzle')"> RETURN TO HOME </button>
+    </div>
+    <div class = "column flex-one">
+    <button class="button"> EMILY CARR'S WEBSITE </button>
+    </div>
+    </div>
+</div>
 
 <router-outlet></router-outlet>

@@ -351,4 +351,4 @@ export const ids = {
 };
 
 // this is a guess. meant to be edited.
-export const dimensions = [50, 50];
+export const dimensions = [40, 40];
