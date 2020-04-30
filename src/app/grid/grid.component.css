@@ -1,3 +1,57 @@
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
+
+.fakeimg {
+  background-color: #aaa;
+  width: 80%;
+  padding: 20px;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid black;
+    height: 1vw; /* em */
+    color: black;
+    font-size: 2vmin;
+    white-space: nowrap;
+    overflow : hidden;
+    visibility: visible;
+}
+
+.cell {
+    border: 1px solid black;
+    height: 1vw; /* em */
+    color: black;
+    font-size: 2vmin;
+    white-space: nowrap;
+    overflow : hidden;
+    visibility: visible;
+}
+
+.numero {
+    font-size: smaller;
+    color: black;
+}
+
+.empty {
+    background-color: black;
+}
+
+.temp {
+  background-color: white;
+  color: red;
+}
