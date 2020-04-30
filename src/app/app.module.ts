@@ -9,6 +9,7 @@ import { PoemComponent } from './poem/poem.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterButtonsComponent } from './footer-buttons/footer-buttons.component';
 import { AboutAndCreditsComponent } from './about-and-credits/about-and-credits.component';
+import { EventHandlerComponent } from './event-handler/event-handler.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AboutAndCreditsComponent } from './about-and-credits/about-and-credits.
     HeaderComponent,
     FooterButtonsComponent,
     AboutAndCreditsComponent,
+    EventHandlerComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,4 +29,5 @@ import { AboutAndCreditsComponent } from './about-and-credits/about-and-credits.
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

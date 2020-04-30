@@ -40,9 +40,9 @@ table {
 
 th, td {
     border: none; /*border: 1px solid grey; */
-    height: 1vw; /* em */
+    height: 1vw; /* 1vw 1em */
     color: black;
-    font-size: 2vmin;
+    font-size: 1.5vmin;
     overflow : hidden;
 }
 

@@ -1,8 +1,8 @@
 <div id="puzzle">
     <div class="header section"><app-header></app-header></div>
     <div class="two-column section">
-        <div class="column section left"><app-grid></app-grid></div>
-        <div class="column section right"><app-clues></app-clues></div>
+        <div class="column section left"><app-grid [clue]="clue"></app-grid></div>
+        <div class="column section right"><app-clues (clueSelected)="onEvent($event)"></app-clues></div>
     </div>
     <div class="scroll-down-message section">Scroll down message</div>
 
@@ -10,10 +10,10 @@
 
     <div class="row">
         <div class = "column flex-one">
-        <button class="button" (click)="toggle('about-and-credits')"> ABOUT & CREDITS </button>
+          <button class="button" (click)="toggle('about-and-credits')"> ABOUT & CREDITS </button>
         </div>
         <div class = "column flex-one">
-        <button class="button"> SAVE YOUR COLLABORATION </button>
+          <button class="button"> SAVE YOUR COLLABORATION </button>
         </div>
     </div>
 </div>
@@ -22,12 +22,12 @@
 <div id="about-and-credits" class="hidden">
     <app-about-and-credits></app-about-and-credits>
     <div class="row">
-    <div class = "column flex-two">
-    <button class="button" (click)="toggle('puzzle')"> RETURN TO HOME </button>
-    </div>
-    <div class = "column flex-one">
-    <button class="button"> EMILY CARR'S WEBSITE </button>
-    </div>
+      <div class = "column flex-two">
+          <button class="button" (click)="toggle('puzzle')"> RETURN TO HOME </button>
+      </div>
+      <div class = "column flex-one">
+          <button class="button"> EMILY CARR'S WEBSITE </button>
+      </div>
     </div>
 </div>
 

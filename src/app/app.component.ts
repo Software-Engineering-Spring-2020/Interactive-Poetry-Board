@@ -22,4 +22,9 @@ export class AppComponent {
     fromElement.classList.add('hidden');
   }
 
+  public clue: String;
+  onEvent(id: String){
+    this.clue = id;
+  }
+
 }

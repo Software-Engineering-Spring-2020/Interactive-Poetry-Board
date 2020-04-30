@@ -1,11 +1,10 @@
 <h2>CROSSWORD</h2>
 <hr>
-<p class="description">Explore the poem by clicking clues that intrigue you.</p>
+<p class="description">Answers will appear on the crossword when you click the related clues.</p>
 
-<button type="button" name="button" (click)="revealPrompt()">Reveal</button>
 <table align="center" id="crossword">
     <tr *ngFor="let row of crossword">
-          <td *ngFor="let col of row">
+          <td  *ngFor="let col of row">
                 <div *ngIf="col!='|'; else elseBlock"> <div style="background-color:'white'"> {{col}}</div></div>
                 <ng-template #elseBlock> <div style="background-color:'white'">&nbsp;  </div> </ng-template>
           </td>

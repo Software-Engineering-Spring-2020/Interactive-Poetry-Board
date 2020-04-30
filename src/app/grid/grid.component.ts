@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ids } from '../yesterdaysNews';
 //import { get } from "scriptjs";
-declare var createTable: any;
-declare var finalize: any;
+declare var reset: any;
+declare var reveal: any;
+declare var fullPopulate: any;
 
 
 @Component({
@@ -15,6 +16,15 @@ export class GridComponent implements OnInit {
   ids = ids;
   crossword: String[][];
 
+  //Use to hard display info
+  //@Input() childEvent: String;
+
+  //Use to trigger event
+  @Input()
+  set clue(clue: String) {
+    reveal(ids, this.crossword, clue);
+  }
+
   constructor() {
     this.crossword = new Array<Array<String>>();
     for (let y = 0; y < 40; y++) {
@@ -24,7 +34,6 @@ export class GridComponent implements OnInit {
       }
       this.crossword.push(row);
     }
-
     this.reset();
   }
 
@@ -33,63 +42,14 @@ export class GridComponent implements OnInit {
   }
 
   reset(){
-    for (let key in ids) {
-      let value = ids[key];
-      let chars = Array.from(value["word"].toUpperCase()); //Spaces are char 32: SPACE
-      let number = key.substring(0, key.length-1);
-      this.crossword[value["startY"]][value["startX"]] = number;
-      if(key.charAt(key.length-1) == "d") {
-        for(var i=0; i<chars.length; i++){
-          this.crossword[value["startY"]+i+1][value["startX"]] = '|';
-        }
-      }
-      else{
-        for(var i=0; i<chars.length; i++){
-          this.crossword[value["startY"]][value["startX"]+i+1] = '|';
-        }
-      }
-    }
+    reset(ids, this.crossword);
   }
 
   revealPrompt(){
-    this.reveal(prompt("Enter ID","18d"));
-  }
-
-  reveal(id){
-    let value = ids[id];
-    let chars = Array.from(value["word"].toUpperCase()); //Spaces are char 32: SPACE
-    if(id.charAt(id.length-1) == "d") {
-      for(var i=0; i<chars.length; i++){
-        this.crossword[value["startY"]+i+1][value["startX"]] = chars[i].toString();
-      }
-    }
-    else{
-      for(var i=0; i<chars.length; i++){
-        this.crossword[value["startY"]][value["startX"]+i+1] = chars[i].toString();
-      }
-    }
+    reveal(ids, this.crossword, prompt("Enter ID","18d"));
   }
 
   fullPopulate(){
-    for (let key in ids) {
-      let value = ids[key];
-      let chars = Array.from(value["word"].toUpperCase()); //Spaces are char 32: SPACE
-      let number = key.substring(0, key.length-1);
-      this.crossword[value["startY"]][value["startX"]] = number;
-      if(key.charAt(key.length-1) == "d") {
-        for(var i=0; i<chars.length; i++){
-          let c = chars[i].toString();
-          if(c.charCodeAt(0)==32) c = '|';
-          this.crossword[value["startY"]+i+1][value["startX"]] = c;//chars[i].toString().charCodeAt(0).toString();
-        }
-      }
-      else{
-        for(var i=0; i<chars.length; i++){
-          let c = chars[i].toString();
-          if(c.charCodeAt(0)==32) c = '|';
-          this.crossword[value["startY"]][value["startX"]+i+1] = c;//chars[i].toString().charCodeAt(0).toString();
-        }
-      }
-    }
+    fullPopulate(ids, this.crossword);
   }
 }

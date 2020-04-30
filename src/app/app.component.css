@@ -101,6 +101,11 @@
     display: none;
 }
 
+.fade-in {
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
