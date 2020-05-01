@@ -49,7 +49,9 @@ a:not(.clicked) {
 }
 
 p {
-    margin: 0.25em 0 0.25em 0;
+    margin: 0.2em 0 0.2em 0;
+    line-height: 1.2em;
+    font-size: 11pt;
 }
 
 .description {
