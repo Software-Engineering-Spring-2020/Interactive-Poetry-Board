@@ -9,7 +9,6 @@ import { PoemComponent } from './poem/poem.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterButtonsComponent } from './footer-buttons/footer-buttons.component';
 import { AboutAndCreditsComponent } from './about-and-credits/about-and-credits.component';
-import { EventHandlerComponent } from './event-handler/event-handler.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +18,7 @@ import { EventHandlerComponent } from './event-handler/event-handler.component';
     PoemComponent,
     HeaderComponent,
     FooterButtonsComponent,
-    AboutAndCreditsComponent,
-    EventHandlerComponent,
+    AboutAndCreditsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ids, dimensions, titles} from "../assets/ts";
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Interactive-Poetry-Board';
+  titles = titles;
+
+  /*public poem_title: String;
+  public poem_dimensions: Number[];
+  public poem_ids: {};*/
+
+  public poem_title = titles[0];
+  public poem_dimensions = dimensions[0];
+  public poem_ids = ids[0];
 
   toggle(to: string): void {
     // This is not the best way to do this.
@@ -29,6 +39,14 @@ export class AppComponent {
 
   print(){
     print();
+  }
+
+  public index = 0;
+  selectEvent(){
+    this.poem_title = titles[document.getElementsByTagName("select")['poem_select'].selectedIndex];
+    this.poem_dimensions = dimensions[document.getElementsByTagName("select")['poem_select'].selectedIndex];
+    this.poem_ids = ids[document.getElementsByTagName("select")['poem_select'].selectedIndex];
+    this.index = document.getElementsByTagName("select")['poem_select'].selectedIndex;
   }
 
 }

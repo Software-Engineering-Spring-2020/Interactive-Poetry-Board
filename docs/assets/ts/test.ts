@@ -359,3 +359,5 @@ export const ids = {
 
 // Rows, Columns
 export const dimensions = [40, 40];
+
+export const title = "Test Title";

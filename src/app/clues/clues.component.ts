@@ -1,5 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { ids } from '../yesterdaysNews'
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+//import {ids} from "../../assets/ts";
+import {ids, dimensions, titles} from "../../assets/ts";
 
 @Component({
   selector: 'app-clues',
@@ -8,13 +9,29 @@ import { ids } from '../yesterdaysNews'
 })
 export class CluesComponent implements OnInit {
   @Output() clueSelected = new EventEmitter<String>();
+  private poem_index: number;
 
-  ids = ids; //what is the right type???
+  ids = ids[0];
+  @Input() set index(index: number) {
+    this.poem_index = index;
+    this.ids = ids[index];
+    this.generateClues();
+  }
+
+  //ids = ids; //what is the right type???
+  //ids = ids[0];
   downIds: Array<String>;
   acrossIds: Array<String>;
 
   constructor() {
-    let idsKeys: Array<String> = Object.keys(ids);
+    //this.generateClues();
+   }
+
+  ngOnInit(): void {
+  }
+
+  generateClues(){
+    let idsKeys: Array<String> = Object.keys(this.ids);
     let collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'}); //type it
     idsKeys = idsKeys.sort(collator.compare);
     this.acrossIds = new Array<String>();
@@ -27,9 +44,6 @@ export class CluesComponent implements OnInit {
         this.downIds.push(key);
       }
     });
-   }
-
-  ngOnInit(): void {
   }
 
   switch(event: Event): void {

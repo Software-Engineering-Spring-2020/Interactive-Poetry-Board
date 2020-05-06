@@ -1,8 +1,8 @@
 <div id="puzzle">
-    <div class="header section no-print"><app-header></app-header></div>
+    <div class="header section no-print"><app-header [index]="index"></app-header></div>
     <div class="two-column section no-print">
-        <div class="column section left"><app-grid [clue]="clue"></app-grid></div>
-        <div class="column section right"><app-clues (clueSelected)="onEvent($event)"></app-clues></div>
+        <div class="column section left"><app-grid [index]="index" [clue]="clue"></app-grid></div>
+        <div class="column section right"><app-clues (clueSelected)="onEvent($event)" [index]="index" ></app-clues></div>
     </div>
     <div class="scroll-down-message section no-print">Scroll down message</div>
 
@@ -30,5 +30,9 @@
       </div>
     </div>
 </div>
+
+<select id="poem_select" (change)="selectEvent()">
+  <option *ngFor="let t of titles">{{t}}</option>
+</select>
 
 <router-outlet></router-outlet>

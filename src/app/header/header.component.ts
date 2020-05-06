@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {ids, dimensions, titles} from "../../assets/ts";
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  title: String;
+  @Input() set index(index: number) {
+    this.title = titles[index].toUpperCase();
+  }
 
   constructor() { }
 
