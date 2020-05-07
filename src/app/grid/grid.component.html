@@ -7,14 +7,16 @@
           <td  *ngFor="let col of row; index as j">
             <!-- Issolate Numbers for different styling white:#FFFFFF grey:#CCC8C8 -->
               <div *ngIf="isNumber(col); else second"> <div style="background-color:'grey';color:black"> {{col}}</div></div>
-            <!-- make all spaces annimate too -->
+            <!-- make new spaces annimate -->
               <ng-template #second><div *ngIf="col=='*'&&compareArrays(col, i, j); else third"> <div class="highlight fade-in" style="background-color:'white'"> &nbsp;</div></div></ng-template>
+            <!-- Populate non-annimated previously revealed spaces -->
+              <ng-template #third><div *ngIf="col=='*'; else fourth"> <div style="background-color:'white'"> &nbsp;</div></div></ng-template>
             <!-- Annimate changed cells from previous state -->
-              <ng-template #third><div *ngIf="col!='|'&&compareArrays(col, i, j); else fourth"> <div class="highlight fade-in" style="background-color:'white'"> {{col}}</div></div></ng-template>
+              <ng-template #fourth><div *ngIf="col!='|'&&compareArrays(col, i, j); else fifth"> <div class="highlight fade-in" style="background-color:'white'"> {{col}}</div></div></ng-template>
             <!-- Populate non-annimated previously revealed cells -->
-              <ng-template #fourth><div *ngIf="col!='|'; else fifth"> <div style="background-color:'white'"> {{col}}</div></div></ng-template>
+              <ng-template #fifth><div *ngIf="col!='|'; else sixth"> <div style="background-color:'white'"> {{col}}</div></div></ng-template>
             <!-- make all | into blank cells -->
-              <ng-template #fifth><div style="background-color:'white'">&nbsp;</div></ng-template>
+              <ng-template #sixth><div style="background-color:'white'">&nbsp;</div></ng-template>
           </td>
       </tr>
 </table>
