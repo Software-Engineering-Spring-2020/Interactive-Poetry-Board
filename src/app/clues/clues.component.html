@@ -14,7 +14,7 @@
 <div class="clues">
     <div class="across">
         <ng-template ngFor let-id [ngForOf]="acrossIds">
-            <p><a (click)="trigger($event, id)">{{ id | slice:0:-1 }}. {{ ids[id]["clue"] }}</a></p>
+            <p><a class="fade-out" (click)="trigger($event, id)">{{ id | slice:0:-1 }}. {{ ids[id]["clue"] }}</a></p>
         </ng-template>
     </div>
 

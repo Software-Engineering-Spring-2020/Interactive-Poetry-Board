@@ -82,7 +82,7 @@ th, td {
 }
 
 .highlight {
-  -webkit-animation: highlightEffect 1s;
+  -webkit-animation: highlightEffect .5s;
   animation: highlightEffect 1s;
 }
 

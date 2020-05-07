@@ -45,7 +45,9 @@ a:not(.clicked) {
 }
 
 .clicked {
-    color: grey;
+  -webkit-animation: fadeEffect .25s;
+  animation: fadeEffect .25s;
+  color: lightgray;
 }
 
 p {
@@ -74,3 +76,12 @@ a:not(.selected):not(.clicked):hover {
     display: none;
 }
 
+@-webkit-keyframes fadeEffect {
+  from {color:inherit;}
+  to {color: lightgrey;}
+}
+
+@keyframes fadeEffect {
+  from {color:inherit;}
+  to {color: lightgrey;}
+}

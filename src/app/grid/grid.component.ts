@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChildren, QueryList } from '@angular/core';
 import {ids, dimensions, titles} from "../../assets/ts";
 //import { get } from "scriptjs";
 declare var reset: any;
@@ -15,6 +15,7 @@ declare var fullPopulate: any;
 export class GridComponent implements OnInit {
   //ids = ids;
   crossword: Object[][];
+  prev_crossword: Object[][];
   private poem_index: number;
 
   //Use to hard display info
@@ -24,6 +25,7 @@ export class GridComponent implements OnInit {
   @Input() set clue(clue: String) {
     reveal(ids[this.poem_index], this.crossword, clue);
   }
+
   @Input()
   set index(index: number) {
     this.poem_index = index;
@@ -45,6 +47,8 @@ export class GridComponent implements OnInit {
       }
       this.crossword.push(row);
     }
+    this.prev_crossword = this.crossword.map(function(arr) {
+      return arr.slice();});
     this.reset();
   }
 
@@ -63,4 +67,22 @@ export class GridComponent implements OnInit {
   //isNumber: Number | null = null;
 
   isNumber(val): boolean { return typeof val == 'number'; }
+
+  @ViewChildren('grid') grid: QueryList<any>;
+
+  ngAfterViewInit() {
+    this.grid.changes.subscribe(t => {
+      this.ngForRendred();
+    })
+  }
+
+  ngForRendred() {
+    this.prev_crossword = this.crossword.map(function(arr) {
+      return arr.slice();});
+  }
+
+  compareArrays(val, i, j): boolean {
+    //alert(val+" "+i+" "+j+" "+this.prev_crossword[i][j]);
+    return val!=this.prev_crossword[i][j];
+    }
 }
