@@ -53,14 +53,14 @@ function fullPopulate(ids, crossword){
     if(key.charAt(key.length-1) == "d") {
       for(var i=0; i<chars.length; i++){
         let c = chars[i].toString();
-        if(c.charCodeAt(0)==32) c = '|';
+        if(c.charCodeAt(0)==32) c = '*';
         crossword[value["startY"]+i+1][value["startX"]] = c;//chars[i].toString().charCodeAt(0).toString();
       }
     }
     else{
       for(var i=0; i<chars.length; i++){
         let c = chars[i].toString();
-        if(c.charCodeAt(0)==32) c = '|';
+        if(c.charCodeAt(0)==32) c = '*';
         crossword[value["startY"]][value["startX"]+i+1] = c;//chars[i].toString().charCodeAt(0).toString();
       }
     }
