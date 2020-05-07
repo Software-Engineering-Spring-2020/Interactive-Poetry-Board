@@ -8,7 +8,7 @@ import {ids, dimensions, titles} from "../assets/ts";
 })
 export class AppComponent {
   title = 'Interactive-Poetry-Board';
-  titles = titles;
+  titles = titles.map(function(x){ return x.toUpperCase() });
 
   /*public poem_title: String;
   public poem_dimensions: Number[];
