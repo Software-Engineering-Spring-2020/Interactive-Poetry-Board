@@ -64,6 +64,8 @@
     cursor: pointer;
 }
 
+a { text-decoration: none; }
+
 .button:hover {
     background-color: lightgray;
   }
