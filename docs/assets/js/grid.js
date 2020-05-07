@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', init, false);
+function init(){
+  var left = document.getElementsByTagName('div')['left'],
+      right = document.getElementsByTagName('div')['right'];
+  if(left.clientHeight > right.clientHeight) left.classList.add('left');
+  else right.classList.add('right');
+}
+
 function reset(ids, crossword){
   for (let key in ids) {
     let value = ids[key];

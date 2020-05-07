@@ -7,6 +7,10 @@
     font-family: Goudy;
 }
 
+.header {
+  border-bottom: 3px solid black;
+}
+
 /* Add a card effect for articles */
 .section {
   position: relative;
@@ -16,9 +20,13 @@
   box-sizing: border-box;
 }
 
+.row {
+    display: flex;
+}
+
 .two-column:after {
   content: "";
-  display: table;
+  display: flex;
   clear: both;
 }
 
@@ -26,58 +34,21 @@
 .column {
   float: left;
   width: 50%;
-  overflow-x: hidden;
-  border: hidden hidden solid hidden;
-  padding: 20px;
-  flex: 50%;
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    float: none;
-    width: 100%;
-    padding: 0
-  }
+  padding: 10px;
+  /*flex: 1;*/ /*Creates same-width columns*/
 }
 
 .left {
-    border-style: solid solid hidden hidden;
+    border-style: hidden solid hidden hidden;
 }
 
 .right {
-    border-style: solid hidden hidden hidden;
-}
-
-.poem {
-    border-style: hidden hidden solid hidden;
+    border-style: hidden hidden hidden solid;
 }
 
 .scroll-down-message {
     text-align: center;
     border-style: hidden hidden solid hidden;
-}
-
-.row {
-    display: flex;
-}
-
-.column {
-    float: left;
-    padding: 10px;
-    /*flex: 1;*/ /*Creates same-width columns*/
-}
-
-.nb { /* nb = no border */
-    border-style: hidden hidden hidden hidden;
-}
-
-.flex-two {
-    flex:2;
-}
-
-.flex-one { /* nb = no border */
-    border-style: hidden hidden hidden hidden;
-    flex:1;
 }
 
 .button {
@@ -93,17 +64,64 @@
     cursor: pointer;
 }
 
-  .button:hover {
+.button:hover {
     background-color: lightgray;
   }
-
-.hidden {
-    display: none;
-}
 
 .poem_select {
   position: absolute;
   width: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    float: left;
+    width: 100%;
+    padding: 0;
+  }
+  .left {
+    border: none;
+  }
+  .right {
+    border-style: solid hidden hidden hidden;
+  }
+  .scroll-down-message {
+      text-align: center;
+      border-style: solid hidden solid hidden;
+  }
+  .poem_select {
+    position: relative;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+}
+
+.poem {
+    border-style: hidden hidden solid hidden;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.nb { /* nb = no border */
+    border-style: hidden hidden hidden hidden;
+}
+
+.flex-two {
+    flex:2;
+}
+
+.flex-one { /* nb = no border */
+    border-style: hidden hidden hidden hidden;
+    flex:1;
+}
+
+.hidden {
+    display: none;
 }
 
 .centered {
