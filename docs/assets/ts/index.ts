@@ -1,7 +1,7 @@
 import * as YN from "./yesterdaysNews";
-import * as T from "./test";
+import * as TQ from "./trickyQuestions";
 
 
-export const ids = [YN.ids, T.ids];
-export const dimensions = [YN.dimensions, T.dimensions];
-export const titles = [YN.title, T.title];
+export const ids = [YN.ids, TQ.ids];
+export const dimensions = [YN.dimensions, TQ.dimensions];
+export const titles = [YN.title, TQ.title];

@@ -41,11 +41,11 @@
 }
 
 .left {
-    border-style: solid hidden hidden hidden;
+    border-style: solid solid hidden hidden;
 }
 
 .right {
-    border-style: solid hidden hidden solid;
+    border-style: solid hidden hidden hidden;
 }
 
 .poem {
@@ -99,6 +99,13 @@
 
 .hidden {
     display: none;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .fade-in {

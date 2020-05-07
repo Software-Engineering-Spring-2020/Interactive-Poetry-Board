@@ -15,7 +15,7 @@ hr {
 .description {
     font-style: italic;
     text-align: center;
-    padding: 0 0 2ch 0;
+    /*padding: 0 0 2ch 0;*/
 }
 
 .centered {

@@ -16,6 +16,7 @@ export class PoemComponent implements OnInit {
   poemText:String;
 
   @Input() childMessage: string;
+  //@Input('username') username: String;
 
   constructor() {
     //defines poemText

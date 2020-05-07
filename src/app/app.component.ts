@@ -37,8 +37,18 @@ export class AppComponent {
     this.clue = id;
   }
 
+  public name = "";
   print(){
+    var value = document.getElementsByTagName('input')['name'].value;
+    if(value != "") this.name = value;
+    else{
+      this.name = prompt("Please enter your name", "");
+      document.getElementsByTagName('input')['name'].value = this.name;
+    }
+    if(this.name != "") document.getElementById('name').parentElement.classList.add('no-border');
     print();
+    document.getElementById('name').parentElement.classList.remove('no-border');
+    this.name = "";
   }
 
   public index = 0;
