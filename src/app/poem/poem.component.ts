@@ -16,15 +16,16 @@ export class PoemComponent implements OnInit {
   //The string that contains the poem (decleration)
   poemText:String;
   private poem_index: number;
+  ids = ids[0];
 
   constructor() {
     //defines poemText
     this.poemText = new String();
   }
 
-  @Input() set clue(clue: string) {
+  @Input() set clue(clue: String) {
     if (clue != null){
-      this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
+        //this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
     }
   }
   title: String;
