@@ -37,12 +37,7 @@ input {
 }
 
 .poem {
-    white-space: pre;
     text-align: left;
-    overflow-wrap: normal;
     padding-left: 50px;
-}
-
-p {
-    overflow-wrap: normal;
+    white-space:pre-wrap; /* wraps text and preserves new lines */
 }
