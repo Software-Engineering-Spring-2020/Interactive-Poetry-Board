@@ -25,13 +25,15 @@ export class PoemComponent implements OnInit {
 
   @Input() set clue(clue: String) {
     if (clue != null){
-        this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
+        //this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
     }
   }
+  title: String;
   @Input()
   set index(index: number) {
     if (index != null)
     this.poem_index = index;
+    this.title = titles[index].toUpperCase();
   }
 
   ngOnInit(): void {

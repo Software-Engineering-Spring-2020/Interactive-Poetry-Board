@@ -19,7 +19,7 @@ hr {
 }
 
 input {
-  width: 5%;
+  /*width: 5%;*/
   border: none;
   font-style: inherit;
   font-size: smaller;
