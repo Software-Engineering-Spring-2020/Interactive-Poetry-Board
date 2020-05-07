@@ -18,14 +18,13 @@ export class GridComponent implements OnInit {
   prev_crossword: Object[][];
   private poem_index: number;
 
-  //Use to hard display info
-  //@Input() index: Number;
-
   //Use to trigger event
   @Input() set clue(clue: String) {
     reveal(ids[this.poem_index], this.crossword, clue);
   }
 
+  //Use to hard display info
+  //@Input('index') index: Number;
   @Input()
   set index(index: number) {
     this.poem_index = index;
@@ -64,12 +63,9 @@ export class GridComponent implements OnInit {
     fullPopulate(ids[this.poem_index], this.crossword);
   }
 
-  //isNumber: Number | null = null;
-
   isNumber(val): boolean { return typeof val == 'number'; }
 
   @ViewChildren('grid') grid: QueryList<any>;
-
   ngAfterViewInit() {
     this.grid.changes.subscribe(t => {
       this.ngForRendred();
@@ -82,7 +78,6 @@ export class GridComponent implements OnInit {
   }
 
   compareArrays(val, i, j): boolean {
-    //alert(val+" "+i+" "+j+" "+this.prev_crossword[i][j]);
     return val!=this.prev_crossword[i][j];
     }
 }
