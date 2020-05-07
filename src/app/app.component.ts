@@ -41,14 +41,11 @@ export class AppComponent {
   print(){
     var value = document.getElementsByTagName('input')['name'].value;
     if(value != "") this.name = value;
-    else{
-      this.name = prompt("Please enter your name", "");
-      document.getElementsByTagName('input')['name'].value = this.name;
-    }
-    if(this.name != "") document.getElementById('name').parentElement.classList.add('no-border');
+    else this.name = prompt("Please enter your name", "");
+    var base = document.getElementById('credits').innerHTML;
+    if(this.name != "") document.getElementById('credits').innerHTML += " and "+this.name;
     print();
-    document.getElementById('name').parentElement.classList.remove('no-border');
-    this.name = "";
+    document.getElementById('credits').innerHTML = base;
   }
 
   public index = 0;
