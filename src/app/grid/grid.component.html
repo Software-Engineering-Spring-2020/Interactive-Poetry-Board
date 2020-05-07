@@ -5,8 +5,9 @@
 <table align="center" id="crossword">
     <tr *ngFor="let row of crossword">
           <td  *ngFor="let col of row">
-                <div *ngIf="col!='|'; else elseBlock"> <div style="background-color:'white'"> {{col}}</div></div>
-                <ng-template #elseBlock> <div style="background-color:'white'">&nbsp;  </div> </ng-template>
+              <div *ngIf="isNumber(col); else second"> <div style="background-color:'grey';color:black"> {{col}}</div></div> <!-- white:#FFFFFF grey:#CCC8C8 -->
+              <ng-template #second><div *ngIf="col!='|'; else third"> <div style="background-color:'white'"> {{col}}</div></div></ng-template> <!-- ensure there are blacked-out cells -->
+              <ng-template #third> <div style="background-color:'white'">&nbsp;  </div> </ng-template>  <!-- ensure empty cell to accomadate spaces in answers -->
           </td>
       </tr>
 </table>

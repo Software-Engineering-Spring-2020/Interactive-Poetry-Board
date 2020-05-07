@@ -14,7 +14,7 @@ declare var fullPopulate: any;
 
 export class GridComponent implements OnInit {
   //ids = ids;
-  crossword: String[][];
+  crossword: Object[][];
   private poem_index: number;
 
   //Use to hard display info
@@ -37,9 +37,9 @@ export class GridComponent implements OnInit {
   }
 
   createTable(dimensions){
-    this.crossword = new Array<Array<String>>();
+    this.crossword = new Array<Array<Object>>();
     for (let y = 0; y < dimensions[0]; y++) {
-      let row:String[]  = new Array<String>();
+      let row:Object[]  = new Array<Object>();
       for (let x = 0; x < dimensions[1]; x++){
         row.push(null);
       }
@@ -59,4 +59,8 @@ export class GridComponent implements OnInit {
   fullPopulate(){
     fullPopulate(ids[this.poem_index], this.crossword);
   }
+
+  //isNumber: Number | null = null;
+
+  isNumber(val): boolean { return typeof val == 'number'; }
 }
