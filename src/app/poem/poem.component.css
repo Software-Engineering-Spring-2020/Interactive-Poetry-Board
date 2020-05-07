@@ -43,5 +43,11 @@ input {
 
 .poem {
     white-space: pre;
-    text-align: center;
+    text-align: left;
+    overflow-wrap: normal;
+    padding-left: 50px;
+}
+
+p {
+    overflow-wrap: normal;
 }

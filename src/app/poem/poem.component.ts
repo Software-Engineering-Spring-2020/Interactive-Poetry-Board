@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {ids, dimensions, titles} from "../../assets/ts";
 
 
 /**
@@ -14,17 +15,26 @@ export class PoemComponent implements OnInit {
 
   //The string that contains the poem (decleration)
   poemText:String;
-
-  @Input() childMessage: string;
-  //@Input('username') username: String;
+  private poem_index: number;
+  ids = ids[0];
 
   constructor() {
     //defines poemText
     this.poemText = new String();
   }
 
+  @Input() set clue(clue: String) {
+    if (clue != null){
+        this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
+    }
+  }
+  @Input()
+  set index(index: number) {
+    if (index != null)
+    this.poem_index = index;
+  }
+
   ngOnInit(): void {
-    this.addClue("testOfClueAddFunction");
   }
 
   addClue(text:String){
