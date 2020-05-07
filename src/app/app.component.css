@@ -101,6 +101,11 @@
     display: none;
 }
 
+.poem_select {
+  position: absolute;
+  width: auto;
+}
+
 .centered {
   position: relative;
   top: 50%;

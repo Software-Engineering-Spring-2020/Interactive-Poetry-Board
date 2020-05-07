@@ -1,5 +1,10 @@
 <div id="puzzle">
-    <div class="header section no-print"><app-header [index]="index"></app-header></div>
+    <div class="header">
+      <select class="no-print poem_select button" id="poem_select" (change)="selectEvent()">
+        <option *ngFor="let t of titles">{{t}}</option>
+      </select>
+      <app-header [index]="index"></app-header>
+    </div>
     <div class="two-column section no-print">
         <div class="column section left"><app-grid [index]="index" [clue]="clue"></app-grid></div>
         <div class="column section right"><app-clues (clueSelected)="onEvent($event)" [index]="index" ></app-clues></div>
@@ -16,6 +21,8 @@
           <button class="button" (click)="print()"> SAVE YOUR COLLABORATION </button>
         </div>
     </div>
+
+
 </div>
 
 
@@ -30,9 +37,5 @@
       </div>
     </div>
 </div>
-
-<select class="centered no-print" id="poem_select" (change)="selectEvent()">
-  <option *ngFor="let t of titles">{{t}}</option>
-</select>
 
 <router-outlet></router-outlet>

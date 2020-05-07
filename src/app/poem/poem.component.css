@@ -30,11 +30,6 @@ input {
     .no-print {
       display: none;
     }
-    .no-border {
-      display: inline;
-      border: none;
-      border-bottom: none;
-    }
 }
 
 .poemTitle {
