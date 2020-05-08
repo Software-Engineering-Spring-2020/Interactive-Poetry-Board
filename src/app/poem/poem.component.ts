@@ -23,9 +23,9 @@ export class PoemComponent implements OnInit {
     this.poemText = new String();
   }
 
-  @Input() set clue(clue: String) {
+  @Input() set clue(clue: string) {
     if (clue != null){
-        //this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
+        this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
     }
   }
   title: String;
