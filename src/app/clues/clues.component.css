@@ -77,11 +77,11 @@ a:not(.selected):not(.clicked):hover {
 }
 
 @-webkit-keyframes fadeEffect {
-    from {background-color: inherit;}
+    from {background-color: lightgray;}
     to {background-color: #a5f3e6;}
 }
 
 @keyframes fadeEffect {
-    from {background-color: inherit;}
+    from {background-color: lightgray;}
     to {background-color: #a5f3e6;}
 }
