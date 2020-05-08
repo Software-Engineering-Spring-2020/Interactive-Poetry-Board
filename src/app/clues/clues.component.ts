@@ -13,6 +13,9 @@ export class CluesComponent implements OnInit {
 
   ids = ids[0];
   @Input() set index(index: number) {
+    let clickedClues: HTMLCollectionOf<Element> = document.getElementsByClassName("clicked");
+    while (clickedClues.length > 0)
+      clickedClues[0].classList.remove("clicked");
     this.poem_index = index;
     this.ids = ids[index];
     this.generateClues();
