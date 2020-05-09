@@ -72,7 +72,9 @@ a { text-decoration: none; }
 
 .poem_select {
   position: absolute;
+  display: flex;
   width: auto;
+  transform: translate(0%, 75%);
 }
 
 @media screen and (max-width: 600px) {

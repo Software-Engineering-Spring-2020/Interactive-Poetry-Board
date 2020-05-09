@@ -25,7 +25,7 @@ export class AppComponent {
     toElement.classList.remove('hidden');
     if (to == 'about-and-credits') {
       fromElement = document.getElementById('puzzle');
-      this.adjustHeight();
+      this.adjustHeight(false);
     }
     else {
       fromElement = document.getElementById('about-and-credits');
@@ -35,14 +35,23 @@ export class AppComponent {
 
   onResize(event){
     if(event.target.innerWidth <= 600){
-      alert(true);
       document.getElementsByClassName('left')['static-about'].style.width = "100%";
       document.getElementsByClassName('right')['static-credits'].style.width = "100%";
     }
-    else this.adjustHeight();
+    else this.adjustHeight(true);
+    var left = document.getElementsByTagName('div')['left'],
+        right = document.getElementsByTagName('div')['right'];
+    if(left.clientHeight > right.clientHeight){
+      left.classList.add('left'); //OR element.getBoundingClientRect().height
+      right.classList.remove('right');
+    }
+    else{
+      left.classList.remove('left');
+      right.classList.add('right');
+    }
   }
 
-  adjustHeight(){
+  adjustHeight(resize){
     let about = document.getElementsByTagName('div')['static-about'],
         credits = document.getElementsByTagName('div')['static-credits'],
         left = document.getElementsByClassName('left')['static-about'],
@@ -60,6 +69,7 @@ export class AppComponent {
         right.style.width = (center-offset)+"%";
       }
     }
+    alert(about.clientHeight+" "+credits.clientHeight+" "+document.getElementById("about-credits").clientHeight);
   }
 
   public clue: String;

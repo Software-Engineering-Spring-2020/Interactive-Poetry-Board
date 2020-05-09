@@ -43,7 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 /*This looks really weird with centered headings*/
 
 .left {
-  border: hidden;
   /*border-style: hidden solid hidden hidden;*/
 }
 
@@ -55,9 +54,6 @@ h1, h2, h3, h4, h5, h6 {
   .column {
     float: left;
     padding: 0;
-  }
-  .left {
-    border: none;
   }
   .right {
     border-top: 3px solid black;
