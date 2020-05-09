@@ -19,8 +19,6 @@ export class PoemComponent implements OnInit {
   ids = ids[0];
 
   constructor() {
-    //defines poemText
-    this.poemText = new String();
   }
 
   @Input() set clue(clue: string) {
@@ -28,12 +26,14 @@ export class PoemComponent implements OnInit {
         this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
     }
   }
+
   title: String;
   @Input()
   set index(index: number) {
     if (index != null)
     this.poem_index = index;
     this.title = titles[index].toUpperCase();
+    this.poemText = new String();
   }
 
   ngOnInit(): void {
