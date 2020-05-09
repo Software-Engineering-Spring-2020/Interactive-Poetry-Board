@@ -25,11 +25,32 @@ export class AppComponent {
     toElement.classList.remove('hidden');
     if (to == 'about-and-credits') {
       fromElement = document.getElementById('puzzle');
+      this.adjustHeight();
     }
     else {
       fromElement = document.getElementById('about-and-credits');
     }
     fromElement.classList.add('hidden');
+  }
+
+  adjustHeight(){
+    let about = document.getElementsByTagName('div')['static-about'],
+        credits = document.getElementsByTagName('div')['static-credits'],
+        left = document.getElementsByClassName('left')['static-about'],
+        right = document.getElementsByClassName('right')['static-credits'],
+        center = 50,
+        offset = 0;
+    if(about.clientWidth!=document.body.clientWidth){
+      left.style.width = center+"%";
+      right.style.width = center+"%";
+      alert(about.clientHeight+" "+credits.clientHeight);
+      if(about.clientHeight>credits.clientHeight){
+        alert("move right");
+      }
+      else{
+        alert("move left");
+      }
+    }
   }
 
   public clue: String;

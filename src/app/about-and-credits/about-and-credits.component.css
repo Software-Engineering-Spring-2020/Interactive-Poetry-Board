@@ -18,8 +18,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
 }
 
-.row {
-  display: flex;
+* {
+  box-sizing: border-box;
+}
+
+.two-column:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .column {
@@ -33,39 +39,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .left {
   border-style: solid solid solid hidden;
-  flex:2;
 }
 
 .right {
   border-style: solid hidden solid hidden;
-  flex:1;
 }
 
-.leftnb { /* nb = no border */
-  border-style: hidden hidden hidden hidden;
-  flex:2;
-}
-
-.rightnb { /* nb = no border */
-  border-style: hidden hidden hidden hidden;
-  flex:1;
-}
-
-.button {
-  font-family: Goudy;
-  display: block;
-  width: 100%;
-  background-color: darkgrey;
-  border: none;
-  color: black;
-  padding: 15px 25px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: lightgray;
+@media screen and (max-width: 600px) {
+  .column {
+    float: left;
+    padding: 0;
+  }
+  .left {
+    border: none;
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+  }
 }
 
 /* Used to underline titles */

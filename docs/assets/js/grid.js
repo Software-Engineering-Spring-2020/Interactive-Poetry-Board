@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', init, false);
 function init(){
   var left = document.getElementsByTagName('div')['left'],
       right = document.getElementsByTagName('div')['right'];
-  if(left.clientHeight > right.clientHeight) left.classList.add('left');
+  if(left.clientHeight > right.clientHeight) left.classList.add('left'); //OR element.getBoundingClientRect().height
   else right.classList.add('right');
 }
 
