@@ -25,10 +25,11 @@ export class AppComponent {
     toElement.classList.remove('hidden');
     if (to == 'about-and-credits') {
       fromElement = document.getElementById('puzzle');
-      this.adjustHeight(false);
+      this.adjustWidth(false);
     }
     else {
       fromElement = document.getElementById('about-and-credits');
+      this.adjustHome();
     }
     fromElement.classList.add('hidden');
   }
@@ -38,7 +39,13 @@ export class AppComponent {
       document.getElementsByClassName('left')['static-about'].style.width = "100%";
       document.getElementsByClassName('right')['static-credits'].style.width = "100%";
     }
-    else this.adjustHeight(true);
+    else {
+      this.adjustWidth(true);
+      this.adjustHome();
+    }
+  }
+
+  adjustHome(){
     var left = document.getElementsByTagName('div')['left'],
         right = document.getElementsByTagName('div')['right'];
     if(left.clientHeight > right.clientHeight){
@@ -51,7 +58,7 @@ export class AppComponent {
     }
   }
 
-  adjustHeight(resize){
+  adjustWidth(resize){
     let about = document.getElementsByTagName('div')['static-about'],
         credits = document.getElementsByTagName('div')['static-credits'],
         left = document.getElementsByClassName('left')['static-about'],
@@ -69,7 +76,7 @@ export class AppComponent {
         right.style.width = (center-offset)+"%";
       }
     }
-    alert(about.clientHeight+" "+credits.clientHeight+" "+document.getElementById("about-credits").clientHeight);
+    //alert(about.clientHeight+" "+credits.clientHeight);
   }
 
   public clue: String;
