@@ -22,6 +22,11 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
+.section{
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
 .two-column:after {
   content: "";
   display: block;
@@ -38,11 +43,12 @@ h1, h2, h3, h4, h5, h6 {
 /*This looks really weird with centered headings*/
 
 .left {
-  border-style: solid solid solid hidden;
+  border: hidden;
+  /*border-style: hidden solid hidden hidden;*/
 }
 
 .right {
-  border-style: solid hidden solid hidden;
+  border-style: hidden hidden hidden solid;
 }
 
 @media screen and (max-width: 600px) {
@@ -52,10 +58,10 @@ h1, h2, h3, h4, h5, h6 {
   }
   .left {
     border: none;
-    width: 100%;
   }
   .right {
-    width: 100%;
+    border-top: 3px solid black;
+    border-left: hidden;
   }
 }
 

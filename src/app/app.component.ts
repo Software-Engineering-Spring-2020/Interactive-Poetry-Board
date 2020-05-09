@@ -33,22 +33,31 @@ export class AppComponent {
     fromElement.classList.add('hidden');
   }
 
+  onResize(event){
+    if(event.target.innerWidth <= 600){
+      alert(true);
+      document.getElementsByClassName('left')['static-about'].style.width = "100%";
+      document.getElementsByClassName('right')['static-credits'].style.width = "100%";
+    }
+    else this.adjustHeight();
+  }
+
   adjustHeight(){
     let about = document.getElementsByTagName('div')['static-about'],
         credits = document.getElementsByTagName('div')['static-credits'],
         left = document.getElementsByClassName('left')['static-about'],
         right = document.getElementsByClassName('right')['static-credits'],
         center = 50,
-        offset = 0;
-    if(about.clientWidth!=document.body.clientWidth){
-      left.style.width = center+"%";
-      right.style.width = center+"%";
-      alert(about.clientHeight+" "+credits.clientHeight);
-      if(about.clientHeight>credits.clientHeight){
-        alert("move right");
-      }
-      else{
-        alert("move left");
+        offset = 0,
+        deviation = 15;
+    if(document.body.clientWidth > 600){
+      left.style.width = (center+offset)+"%";
+      right.style.width = (center-offset)+"%";
+      while(about.clientHeight>credits.clientHeight){
+        if(about.clientHeight>credits.clientHeight) offset+=.1;
+        else offset-=.1;
+        left.style.width = (center+offset)+"%";
+        right.style.width = (center-offset)+"%";
       }
     }
   }
