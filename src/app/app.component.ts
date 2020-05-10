@@ -38,6 +38,8 @@ export class AppComponent {
     if(event.target.innerWidth <= 600){
       document.getElementsByClassName('left')['static-about'].style.width = "100%";
       document.getElementsByClassName('right')['static-credits'].style.width = "100%";
+      document.getElementsByTagName('div')['home'].style.width = "50%";
+      document.getElementsByTagName('div')['website'].style.width = "50%";
     }
     else {
       this.adjustWidth(true);
@@ -63,17 +65,23 @@ export class AppComponent {
         credits = document.getElementsByTagName('div')['static-credits'],
         left = document.getElementsByClassName('left')['static-about'],
         right = document.getElementsByClassName('right')['static-credits'],
+        home = document.getElementsByTagName('div')['home'],
+        website = document.getElementsByTagName('div')['website'],
         center = 50,
         offset = 0,
         deviation = 15;
     if(document.body.clientWidth > 600){
       left.style.width = (center+offset)+"%";
       right.style.width = (center-offset)+"%";
+      home.style.width = (center+offset)+"%";
+      website.style.width = (center-offset)+"%";
       while(about.clientHeight>credits.clientHeight){
         if(about.clientHeight>credits.clientHeight) offset+=.1;
         else offset-=.1;
         left.style.width = (center+offset)+"%";
         right.style.width = (center-offset)+"%";
+        home.style.width = (center+offset)+"%";
+        website.style.width = (center-offset)+"%";
       }
     }
     //alert(about.clientHeight+" "+credits.clientHeight);
