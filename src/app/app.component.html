@@ -1,7 +1,7 @@
 <div (window:resize)="onResize($event)">
   <div id="puzzle">
       <div class="header no-print">
-        <select class="poem_select button" id="poem_select" (change)="selectEvent()">
+        <select class="poem_select button centered" id="poem_select" (change)="selectEvent()">
           <option *ngFor="let t of titles">{{t}}</option>
         </select>
         <app-header [index]="index"></app-header>

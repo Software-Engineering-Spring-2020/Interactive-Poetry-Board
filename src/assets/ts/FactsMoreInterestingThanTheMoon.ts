@@ -28,7 +28,7 @@ export const ids = {
       "startX": 32,
       "startY": 0
   },
-  "5d": {
+  /*"5d": {
       "word": "SPECIE",
       "clue": "shit & gold, filthy lucre; a red-haired buffalo, an extinct pheasant, relocated Canadian wolves & upscale Slovakian bears",
       "startX": 40,
@@ -39,7 +39,7 @@ export const ids = {
       "clue": "seeing yourself as fragments of who you have been—",
       "startX": 0,
       "startY":
-  },
+  },*/
   "9d": {
       "word": "LOVE",
       "clue": "inside the poem, the memory of roots",
@@ -261,6 +261,5 @@ export const ids = {
       "clue": "partners in the crime of human evolution",
       "startX": 42,
       "startY": 38
-  },
-
+  }
 };

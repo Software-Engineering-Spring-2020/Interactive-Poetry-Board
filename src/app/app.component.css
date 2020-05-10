@@ -71,10 +71,10 @@ a { text-decoration: none; }
   }
 
 .poem_select {
-  position: absolute;
-  display: flex;
   width: auto;
-  transform: translate(0%, 75%);
+  text-align: center;
+  text-align-last: center;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -92,13 +92,6 @@ a { text-decoration: none; }
   .scroll-down-message {
       text-align: center;
       border-style: solid hidden solid hidden;
-  }
-  .poem_select {
-    position: relative;
-    width: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0%);
   }
 }
 
