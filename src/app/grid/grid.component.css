@@ -87,11 +87,11 @@ th, td {
 }
 
 @-webkit-keyframes highlightEffect {
-  from {background-color: #49bac2;}
+  from {background-color: #72c2cc;}
   to {background-color: white;}
 }
 
 @keyframes highlightEffect {
-  from {background-color: #49bac2;}
+  from {background-color: #72c2cc;}
   to {background-color: white;}
 }
