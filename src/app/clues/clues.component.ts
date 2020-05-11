@@ -51,8 +51,6 @@ export class CluesComponent implements OnInit {
       }
       else {
         this.downIds.push(key);
-        console.log(key);
-        console.log(this.downClues);
         this.downClues.push(key.slice(0, -1) + ". " + ids[this.poem_index][key]["clue"]);
       }
     });
@@ -64,8 +62,8 @@ export class CluesComponent implements OnInit {
       let currentSelectedTab: HTMLCollectionOf<Element> = document.getElementsByClassName("selected");
 
 
-      let currentHiddenClues: HTMLCollectionOf<Element> = document.getElementsByClassName("hidden");
-      currentHiddenClues[0].classList.remove("hidden");
+      let currentHiddenClues: HTMLCollectionOf<Element> = document.getElementsByClassName("hidden-clue");
+      currentHiddenClues[0].classList.remove("hidden-clue");
 
       let currentSelectedClues: HTMLCollectionOf<Element>;
       if (currentSelectedTab[0].id == "across") {
@@ -74,7 +72,7 @@ export class CluesComponent implements OnInit {
       else {
         currentSelectedClues = document.getElementsByClassName("down");
       }
-      currentSelectedClues[0].classList.add("hidden");
+      currentSelectedClues[0].classList.add("hidden-clue");
 
       currentSelectedTab[0].classList.remove("selected");
       tab.classList.add("selected");

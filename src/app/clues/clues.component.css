@@ -72,7 +72,7 @@ a:not(.selected):not(.clicked):hover {
     flex-direction: column;
 }
 
-.hidden {
+.hidden-clue {
     display: none;
 }
 

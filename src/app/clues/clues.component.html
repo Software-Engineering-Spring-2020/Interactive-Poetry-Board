@@ -16,6 +16,6 @@
         <p *ngFor="let clue of acrossClues; index as id"><a class="fade-out" (click)="trigger($event, acrossIds[id])" [innerHTML]="clue"></a></p>
     </div>
 
-    <div class="down hidden">
+    <div class="down hidden-clue">
         <p *ngFor="let clue of downClues; index as id"><a class="fade-out" (click)="trigger($event, downIds[id])" [innerHTML]="clue"></a></p>
     </div>

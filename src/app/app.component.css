@@ -133,6 +133,28 @@ a { text-decoration: none; }
   animation: fadeEffect 1s;
 }
 
+#refresh-note {
+  text-align: center;
+  border-style: hidden hidden solid hidden;
+  padding: 0 0 8px 0;
+  margin: 0 0 1em 0;
+}
+
+#x {
+  position: absolute;
+  right: 1em;
+  background-color: darkgrey;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 1ch 0 1ch;
+}
+
+#x:hover {
+  background-color: lightgray;
+}
+
 @-webkit-keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}

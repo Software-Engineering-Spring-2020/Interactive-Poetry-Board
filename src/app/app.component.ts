@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {ids, dimensions, titles} from "../assets/ts";
 
 @Component({
@@ -6,7 +6,7 @@ import {ids, dimensions, titles} from "../assets/ts";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Interactive-Poetry-Board';
   titles = titles.map(function(x){ return x.toUpperCase() });
 
@@ -17,6 +17,23 @@ export class AppComponent {
   public poem_title = titles[0];
   public poem_dimensions = dimensions[0];
   public poem_ids = ids[0];
+
+  ngOnInit(): void {
+    let refreshNoteSeen = localStorage.getItem('refreshNote') || '';
+    if (refreshNoteSeen == 'seen') {
+      let refreshNote: HTMLElement = document.getElementById("refresh-note");
+      refreshNote.classList.add("hidden");
+    }
+    else {
+      localStorage.setItem('refreshNote', 'seen');
+    }
+    console.log(localStorage.getItem('refreshNote'));
+  }
+
+  dismissRefreshNote() {
+    let refreshNote: HTMLElement = document.getElementById("refresh-note");
+    refreshNote.classList.add("hidden");
+  }
 
   toggle(to: string): void {
     // This is not the best way to do this.
