@@ -67,11 +67,11 @@ th, td {
 }
 
 .hovered {
-  background-color: #72c2cc;
+  background-color: teal;
 }
 
 .revealed {
-  background-color: white;
+  background-color: lightblue;
 }
 
 .fade-in {
@@ -95,11 +95,11 @@ th, td {
 }
 
 @-webkit-keyframes highlightEffect {
-  from {background-color: lightblue;}
-  to {background-color: white;}
+  from {background-color: white;}
+  to {background-color: #72c2cc;}
 }
 
 @keyframes highlightEffect {
-  from {background-color: lightblue;}
-  to {background-color: white;}
+  from {background-color: white;}
+  to {background-color: #72c2cc;}
 }
