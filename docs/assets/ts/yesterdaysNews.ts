@@ -343,7 +343,7 @@ export const ids = {
 },
 
 "41a": {
-    "word": "Unconcious",
+    "word": "Unconciouss",
     "clue": "like the depths of the ocean where even the imagination cannot dive",
     "startX": 23,
     "startY": 33
