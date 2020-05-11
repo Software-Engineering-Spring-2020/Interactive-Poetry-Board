@@ -13,9 +13,9 @@
 
 <div class="clues">
     <div class="across">
-        <p *ngFor="let clue of acrossClues; index as id"><a class="fade-out" (click)="trigger($event, acrossIds[id])" [innerHTML]="clue"></a></p>
+        <p *ngFor="let clue of acrossClues; index as id"><a class="fade-out" (mouseover)="hover($event, acrossIds[id])" (mouseleave)="hoverend($event)" (click)="trigger($event, acrossIds[id])" [innerHTML]="clue"></a></p>
     </div>
 
     <div class="down hidden-clue">
-        <p *ngFor="let clue of downClues; index as id"><a class="fade-out" (click)="trigger($event, downIds[id])" [innerHTML]="clue"></a></p>
+        <p *ngFor="let clue of downClues; index as id"><a class="fade-out" (mouseover)="hover($event, acrossIds[id])" (mouseleave)="hoverend($event)" (click)="trigger($event, downIds[id])" [innerHTML]="clue"></a></p>
     </div>

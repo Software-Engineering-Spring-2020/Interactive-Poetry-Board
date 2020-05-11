@@ -9,6 +9,7 @@ import {ids, dimensions, titles} from "../../assets/ts";
 })
 export class CluesComponent implements OnInit {
   @Output() clueSelected = new EventEmitter<String>();
+    @Output() clueHover = new EventEmitter<String>();
   private poem_index: number;
 
   ids = ids[0];
@@ -87,7 +88,21 @@ export class CluesComponent implements OnInit {
       clue.classList.add("clicked");
       // alert parent
       this.clueSelected.emit(id);
+      this.clueHover.emit(null);
     }
+  }
+
+  hover(event: Event, id: String): void {
+    event.stopPropagation();
+    // strikethrough clicked event
+    let clue: Element = (event.target as Element);
+    if (!clue.classList.contains("clicked")) {
+      this.clueHover.emit(id);
+    }
+  }
+  hoverend(event: Event): void {
+    event.stopPropagation();
+    this.clueHover.emit(null);
   }
 
 }

@@ -109,6 +109,11 @@ export class AppComponent implements OnInit {
     this.clue = id;
   }
 
+  public hover: String;
+  onHover(id: String){
+    this.hover = id;
+  }
+
   public name = "";
   print(){
     var value = document.getElementsByTagName('input')['name'].value;

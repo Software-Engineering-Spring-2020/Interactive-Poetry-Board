@@ -44,6 +44,28 @@ function reveal(ids, crossword, id){
   }
 }
 
+function getCells(ids, id){
+  let x = [],
+      y = [];
+  let value = ids[id];
+  let chars = Array.from(value["word"].toUpperCase()); //Spaces are char 32: SPACE
+  //y.push(value["startY"]);
+  //x.push(value["startX"]);
+  if(id.charAt(id.length-1) == "d") {
+    for(var i=0; i<chars.length; i++){
+      y.push(value["startY"]+i+1);
+      x.push(value["startX"]);
+    }
+  }
+  else{
+    for(var i=0; i<chars.length; i++){
+      y.push(value["startY"]);
+      x.push(value["startX"]+i+1);
+    }
+  }
+  return {y, x};
+}
+
 function fullPopulate(ids, crossword){
   for (let key in ids) {
     let value = ids[key];

@@ -5,18 +5,21 @@
 <table align="center" id="crossword">
     <tr #grid *ngFor="let row of crossword; index as i">
           <td  *ngFor="let col of row; index as j">
+              <div *ngIf="isNumber(col); else second"> <div style="background-color:'grey'">{{col}}</div></div>
             <!-- Issolate Numbers for different styling white:#FFFFFF grey:#CCC8C8 -->
-              <div *ngIf="isNumber(col); else second"> <div style="background-color:'grey';color:black"> {{col}}</div></div>
+              <ng-template #second><div *ngIf="col=='*'&&compareArrays(col, i, j); else third"> <div class="highlight fade-in revealed"> &nbsp;</div></div></ng-template>
             <!-- make new spaces annimate -->
-              <ng-template #second><div *ngIf="col=='*'&&compareArrays(col, i, j); else third"> <div class="highlight fade-in" style="background-color:'white'"> &nbsp;</div></div></ng-template>
+              <ng-template #third><div *ngIf="col=='*'&&compareArrays(col, i, j); else fourth"> <div class="highlight fade-in revealed"> &nbsp;</div></div></ng-template>
             <!-- Populate non-annimated previously revealed spaces -->
-              <ng-template #third><div *ngIf="col=='*'; else fourth"> <div style="background-color:'white'"> &nbsp;</div></div></ng-template>
+              <ng-template #fourth><div *ngIf="col=='*'; else fifth"> <div class="revealed"> &nbsp;</div></div></ng-template>
             <!-- Annimate changed cells from previous state -->
-              <ng-template #fourth><div *ngIf="col!='|'&&compareArrays(col, i, j); else fifth"> <div class="highlight fade-in" style="background-color:'white'"> {{col}}</div></div></ng-template>
+              <ng-template #fifth><div *ngIf="col!='|'&&compareArrays(col, i, j); else sixth"> <div class="highlight fade-in revealed"> {{col}}</div></div></ng-template>
             <!-- Populate non-annimated previously revealed cells -->
-              <ng-template #fifth><div *ngIf="col!='|'; else sixth"> <div style="background-color:'white'"> {{col}}</div></div></ng-template>
+              <ng-template #sixth><div *ngIf="col!='|'; else seventh"> <div class="revealed"> {{col}}</div></div></ng-template>
+            <!-- make all hovered | highlighted -->
+              <ng-template #seventh><div *ngIf="isHovered(col, i, j); else eighth"> <div class="hovered"> &nbsp; </div></div></ng-template>
             <!-- make all | into blank cells -->
-              <ng-template #sixth><div style="background-color:'white'">&nbsp;</div></ng-template>
+              <ng-template #eighth><div style="background-color:'white'">&nbsp;</div></ng-template>
           </td>
       </tr>
 </table>
