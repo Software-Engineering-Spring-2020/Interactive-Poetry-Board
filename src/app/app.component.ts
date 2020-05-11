@@ -10,14 +10,6 @@ export class AppComponent implements OnInit {
   title = 'Interactive-Poetry-Board';
   titles = titles.map(function(x){ return x.toUpperCase() });
 
-  /*public poem_title: String;
-  public poem_dimensions: Number[];
-  public poem_ids: {};*/
-
-  public poem_title = titles[0];
-  public poem_dimensions = dimensions[0];
-  public poem_ids = ids[0];
-
   ngOnInit(): void {
     let refreshNoteSeen = localStorage.getItem('refreshNote') || '';
     if (refreshNoteSeen == 'seen') {
@@ -127,10 +119,8 @@ export class AppComponent implements OnInit {
 
   public index = 0;
   selectEvent(){
-    this.poem_title = titles[document.getElementsByTagName("select")['poem_select'].selectedIndex];
-    this.poem_dimensions = dimensions[document.getElementsByTagName("select")['poem_select'].selectedIndex];
-    this.poem_ids = ids[document.getElementsByTagName("select")['poem_select'].selectedIndex];
     this.index = document.getElementsByTagName("select")['poem_select'].selectedIndex;
+    this.adjustWidth(false);
   }
 
 }
