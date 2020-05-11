@@ -47,7 +47,7 @@ a:not(.clicked) {
 .clicked {
   -webkit-animation: fadeEffect .25s;
   animation: fadeEffect .25s;
-  background-color: #72c2cc;
+  background-color: lightblue;
 }
 
 p {
@@ -78,10 +78,10 @@ a:not(.selected):not(.clicked):hover {
 
 @-webkit-keyframes fadeEffect {
     from {background-color: lightgray;}
-    to {background-color: #72c2cc;}
+    to {background-color: lightblue}
 }
 
 @keyframes fadeEffect {
     from {background-color: lightgray;}
-    to {background-color: #72c2cc;}
+    to {background-color: lightblue}
 }
