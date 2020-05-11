@@ -112,7 +112,7 @@ export class AppComponent implements OnInit {
     if(value != "") this.name = value;
     else this.name = prompt("Please enter your name", "");
     var base = document.getElementById('credits').innerHTML;
-    if(this.name != "") document.getElementById('credits').innerHTML += " and "+this.name;
+    if(this.name != null) document.getElementById('credits').innerHTML += " and "+this.name;
     print();
     document.getElementById('credits').innerHTML = base;
   }
