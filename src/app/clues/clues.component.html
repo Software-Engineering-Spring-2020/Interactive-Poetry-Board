@@ -13,14 +13,9 @@
 
 <div class="clues">
     <div class="across">
-        <ng-template ngFor let-id [ngForOf]="acrossIds">
-            <p><a class="fade-out" (click)="trigger($event, id)">{{ id | slice:0:-1 }}. {{ ids[id]["clue"] }}</a></p>
-        </ng-template>
+        <p *ngFor="let clue of acrossClues; index as id"><a class="fade-out" (click)="trigger($event, acrossIds[id])" [innerHTML]="clue"></a></p>
     </div>
 
     <div class="down hidden">
-        <ng-template ngFor let-id [ngForOf]="downIds">
-            <p><a (click)="trigger($event, id)">{{ id | slice:0:-1 }}. {{ ids[id]["clue"] }}</a></p>
-        </ng-template>
+        <p *ngFor="let clue of downClues; index as id"><a class="fade-out" (click)="trigger($event, downIds[id])" [innerHTML]="clue"></a></p>
     </div>
-</div>

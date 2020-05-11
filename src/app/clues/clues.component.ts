@@ -23,8 +23,11 @@ export class CluesComponent implements OnInit {
 
   //ids = ids; //what is the right type???
   //ids = ids[0];
-  downIds: Array<String>;
-  acrossIds: Array<String>;
+  downClues: Array<string>;
+  acrossClues: Array<string>;
+
+  downIds: Array<string>;
+  acrossIds: Array<string>;
 
   constructor() {
     //this.generateClues();
@@ -34,17 +37,23 @@ export class CluesComponent implements OnInit {
   }
 
   generateClues(){
-    let idsKeys: Array<String> = Object.keys(this.ids);
+    let idsKeys: Array<string> = Object.keys(ids[this.poem_index]);
     let collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'}); //type it
     idsKeys = idsKeys.sort(collator.compare);
-    this.acrossIds = new Array<String>();
-    this.downIds = new Array<String>();
+    this.acrossIds = new Array<string>();
+    this.downIds = new Array<string>();
+    this.acrossClues = new Array<string>();
+    this.downClues = new Array<string>();
     idsKeys.forEach(key => {
       if (key.charAt(key.length - 1) == 'a') {
         this.acrossIds.push(key);
+        this.acrossClues.push(key.slice(0, -1) + ". " + ids[this.poem_index][key]["clue"]);
       }
       else {
         this.downIds.push(key);
+        console.log(key);
+        console.log(this.downClues);
+        this.downClues.push(key.slice(0, -1) + ". " + ids[this.poem_index][key]["clue"]);
       }
     });
   }
