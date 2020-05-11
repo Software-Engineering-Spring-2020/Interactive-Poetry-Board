@@ -28,18 +28,18 @@ export const ids = {
       "startX": 32,
       "startY": 0
   },
-  /*"5d": {
+  "5d": {
       "word": "SPECIE",
       "clue": "shit & gold, filthy lucre; a red-haired buffalo, an extinct pheasant, relocated Canadian wolves & upscale Slovakian bears",
       "startX": 40,
-      "startY":
+      "startY": 0
   },
   "8d": {
       "word": "PARADISE",
       "clue": "seeing yourself as fragments of who you have been—",
-      "startX": 0,
-      "startY":
-  },*/
+      "startX": 4,
+      "startY": 2
+  },
   "9d": {
       "word": "LOVE",
       "clue": "inside the poem, the memory of roots",
