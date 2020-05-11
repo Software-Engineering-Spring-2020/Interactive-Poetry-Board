@@ -22,8 +22,29 @@ input {
   /*width: 5%;*/
   border: none;
   font-style: inherit;
-  font-size: smaller;
+  font-size: inherit;
+  font-family: inherit;
   border-bottom: 1px solid black;
+}
+
+::-webkit-input-placeholder { /*Chrome and Opera*/
+  font-size: smaller;
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-size: smaller;
+  text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-size: smaller;
+  text-align: center;
+}
+
+:-ms-input-placeholder { /*Internet Explorer*/
+  font-size: smaller;
+  text-align: center;
 }
 
 @media print {
