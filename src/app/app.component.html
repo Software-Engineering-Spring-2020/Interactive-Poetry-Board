@@ -1,6 +1,6 @@
 <div (window:resize)="onResize($event)">
   <div id="puzzle">
-    <p id="refresh-note"><i>To clear the poem, refresh the page.</i><a id="x" (click)="dismissRefreshNote()">x</a></p>
+    <p id="refresh-note"><i>To clear the crossword poem™, refresh the page.</i><a id="x" (click)="dismissRefreshNote()">x</a></p>
       <div class="header no-print">
         <select class="poem_select button centered" id="poem_select" (change)="selectEvent()">
           <option *ngFor="let t of titles">{{t}}</option>

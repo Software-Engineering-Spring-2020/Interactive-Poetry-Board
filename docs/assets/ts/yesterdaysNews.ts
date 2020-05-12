@@ -57,7 +57,7 @@ export const ids = {
 
 "35d": {
     "word": "Compassion",
-    "clue": "sharing passion, sharing passivity, sharing our common *inability*",
+    "clue": "sharing passion, sharing passivity, sharing our common <i>inability</i>",
     "startX": 29,
     "startY": 27
 },
@@ -183,7 +183,7 @@ export const ids = {
 
 "27a": {
     "word": "Free will",
-    "clue": "depends on probability, between *can* and *do*",
+    "clue": "depends on probability, between <i>can</i> and <i>do</i>",
     "startX": 25,
     "startY": 19
 },
