@@ -13,6 +13,7 @@ export class CluesComponent implements OnInit {
   private poem_index: number;
 
   ids = ids[0];
+  // called when the poem changes to a different poem
   @Input() set index(index: number) {
     let clickedClues: HTMLCollectionOf<Element> = document.getElementsByClassName("clicked");
     while (clickedClues.length > 0)
@@ -22,22 +23,21 @@ export class CluesComponent implements OnInit {
     this.generateClues();
   }
 
-  //ids = ids; //what is the right type???
-  //ids = ids[0];
   downClues: Array<string>;
   acrossClues: Array<string>;
 
   downIds: Array<string>;
   acrossIds: Array<string>;
 
-  constructor() {
-    //this.generateClues();
-   }
+  constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
-  generateClues(){
+
+  // put the clues into the HTML
+  generateClues() {
+    // put the clues into the HTML by extracting them from ids[this.poem_index] and reading the ids
+    // to determine whether they are across or down
     let idsKeys: Array<string> = Object.keys(ids[this.poem_index]);
     let collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'}); //type it
     idsKeys = idsKeys.sort(collator.compare);
@@ -57,6 +57,7 @@ export class CluesComponent implements OnInit {
     });
   }
 
+  // switch tabs and which clues (down or across) are visible 
   switch(event: Event): void {
     let tab: Element = (event.target as Element);
     if (!tab.classList.contains("selected") && tab.classList.contains("tab")) {
@@ -81,17 +82,18 @@ export class CluesComponent implements OnInit {
 
   }
 
+  // emit a notif for other components that a clue was clicked
   trigger(event: Event, id: String): void {
-    // strikethrough clicked event
     let clue: Element = (event.target as Element);
     if (!clue.classList.contains("clicked")) {
       clue.classList.add("clicked");
-      // alert parent
       this.clueSelected.emit(id);
       this.clueHover.emit(null);
     }
   }
 
+  // emit a notif for other components that a clue was hovered
+  // and stop the hover event from continuing to propogate
   hover(event: Event, id: String): void {
     event.stopPropagation();
     // strikethrough clicked event
@@ -100,6 +102,8 @@ export class CluesComponent implements OnInit {
       this.clueHover.emit(id);
     }
   }
+
+  // stop hover event propogation and end the hover event
   hoverend(event: Event): void {
     event.stopPropagation();
     this.clueHover.emit(null);
