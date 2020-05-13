@@ -60,5 +60,5 @@ input {
 .poem {
     text-align: left;
     padding-left: 50px;
-     white-space:pre-wrap; /* wraps text and preserves new lines */
+    white-space:pre-wrap; /* wraps text and preserves new lines */
 }

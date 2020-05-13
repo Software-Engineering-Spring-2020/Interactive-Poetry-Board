@@ -5,5 +5,8 @@
 </div>
 
 <div class="poem">
-    <p  [innerHTML]="poemText">{{poemText}}</p>
+    <p  [innerHTML]="poemText">{{poemText}}</p> <!-- The poemText is created in the ts file-->
+    <!-- innerHTML correctly reads/formats HTML in the PoemText
+    So <i>word</i> will be displayed in italics, rather than displaying the "<i></i> characters"
+  -->
 </div>

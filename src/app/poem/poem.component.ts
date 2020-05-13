@@ -21,7 +21,7 @@ export class PoemComponent implements OnInit {
   constructor() {
   }
 
-  @Input() set clue(clue: string) {
+  @Input() set clue(clue: string) { // Update when a clue is clicked
     if (clue != null){
         this.addClue(ids[this.poem_index][clue]["clue"]); // Access the clue, as a String, from within the poem's .ts file
     }
@@ -29,7 +29,7 @@ export class PoemComponent implements OnInit {
 
   title: String;
   @Input()
-  set index(index: number) {
+  set index(index: number) { // Update the index when the index is changed
     if (index != null)
     this.poem_index = index;
     this.title = titles[index].toUpperCase();
@@ -39,7 +39,7 @@ export class PoemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addClue(text:String){
+  addClue(text:String){ // Adds a clue to the poemText; called every time a new clue is clicked
     this.poemText+= "\n" + text.toString();
   }
 
