@@ -1,11 +1,11 @@
-# Interactive Poetry Board
+# Crossword Poem™
 
 ## Overview
-HDMI has created an Interactive Poetry Board that provides a fun and engaging way for visitors to create their own poems from crossword clues. The concept, poems, and clues were all created by Dr. Emily Carr.
+HDMI has created a crossword poem™ that provides a fun and engaging way for visitors to create their own poems from crossword clues. The concept, poems, and clues were all created by Dr. Emily Carr.
 
-The board allows the visitor to select from three crosswords and to print the resulting poem. Poems can be effortlessly added by a future team.
+The crossword poem™ allows the visitor to select from three crosswords and to print the resulting poem. Poems can be effortlessly added by a future team.
 
-The board is deployed as a web application that can be run on almost any browser.
+The crossword poem™ is deployed as a web application that can be run on almost any browser.
 
 ## Instructions for Use
 Please watch the how-to-use video [here]().
@@ -74,3 +74,16 @@ Creating these documents takes a while. The process is pretty simple, but attent
 5. Find each word on the crossword. Highlight the number where it starts. The column number - 1 is startX; the row number - 1 is startY. Input these fields. Do this for every poem-piece.
 *Note: Excel sometimes marks the columns with letters. To change this to numbers, go to File -> options -> formulas and check "R1CI reference style."
 6. Fill in the dimensions and title on the TypeScript document. You're done! 
+
+
+### Importing the TypeScript Document
+
+To add a new TypeScript document to the software, first import it and then export its properties from `src/assets/ts/index.ts` as follows:
+
+```
+import * as `<new-poem-acronym>` from `"./<new-poem-ts-document>"`;
+
+export const ids = [..., <new-poem-acronym>.ids];
+export const dimensions = [..., <new-poem-acronym>.dimensions];
+export const titles = [..., <new-poem-acronym>.titles];
+```
