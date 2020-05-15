@@ -8,7 +8,7 @@ The crossword poem™ allows the visitor to select from three crosswords and to 
 The crossword poem™ is deployed as a web application that can be run on almost any browser.
 
 ## Instructions for Use
-Please watch the how-to-use video [here]().
+Please watch the how-to-use video [here](https://youtu.be/v4nLQnCpTjM).
 
 To use the software:
 1. Select a poem that intrigues you from the dropdown menu at the top of the page.
