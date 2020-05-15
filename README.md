@@ -7,6 +7,21 @@ The board allows the visitor to select from three crosswords and to print the re
 
 The board is deployed as a web application that can be run on almost any browser.
 
+## Instructions for Use
+Please watch the how-to-use video [here]().
+
+To use the software:
+1. Select a poem that intrigues you from the dropdown menu at the top of the page.
+2. Clicking the "ACROSS" and "DOWN" tabs, select clues that you are curious about.
+3. Watch as the answers to the clues fill the crossword grid and the clues fill a collaborative poem in the order you select them.
+4. When you're done, print your collaborative poem using the "SAVE YOUR COLLABORATION" button at the bottom of the page.
+
+Notes:
+- To learn more about crossword poem™ and view credits, choose the "ABOUT & CREDITS" button at the bottom of the page.
+  + Once you have read the section, using the "RETURN TO HOME" button at the bottom of the page to return to the home page.
+  + To view Dr. Carr's website, choose the "DR. CARR'S WEBSITE" button at the bottom of the page.
+- To clear the crossword poem™, refresh the page.
+
 ## Technical Details
 
 The app is split into six components:
